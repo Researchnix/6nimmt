@@ -1,0 +1,69 @@
+#!/bin/bash
+
+clear
+echo rm Lennart.cpp Lennart.h
+
+echo "The script starts here"
+echo "Input the class name:"
+read name
+echo ""
+#Generating the class files
+touch $name.cpp
+touch $name.h
+
+
+
+
+
+echo "#ifndef $name\_H " >> $name.h
+echo "#define $name\_H " >> $name.h
+echo "" >> $name.h
+echo "using namespace std; " >> $name.h
+echo "" >> $name.h
+echo "" >> $name.h
+echo "class $name{" >> $name.h
+echo "" >> $name.h
+echo " 		private:" >> $name.h
+echo "" >> $name.h
+echo " 		protected:" >> $name.h
+echo "" >> $name.h
+echo " 		public:" >> $name.h
+echo " 			$name();" >> $name.h
+echo "" >> $name.h
+echo "};" >> $name.h
+echo "" >> $name.h
+echo "#endif // $name\_H" >> $name.h
+
+
+
+
+
+echo "#include <iostream>" >> $name.cpp
+echo "" >> $name.cpp
+echo "#include \"$name.h\"" >> $name.cpp
+echo "" >> $name.cpp
+echo "using namespace std;" >> $name.cpp
+echo "" >> $name.cpp
+echo "//----------------------- CONSTRUCTOR -----------------------  " >> $name.cpp
+echo "" >> $name.cpp
+echo "/*" >> $name.cpp
+echo " *" >> $name.cpp
+echo " *" >> $name.cpp
+echo " *" >> $name.cpp
+echo " */" >> $name.cpp
+echo "$name::$name()" >> $name.cpp
+echo "{" >> $name.cpp
+echo "}" >> $name.cpp
+echo "" >> $name.cpp
+echo "" >> $name.cpp
+echo "//----------------------- PRIVATE FUNCTIONS-----------------------  " >> $name.cpp
+echo "" >> $name.cpp
+echo "" >> $name.cpp
+echo "" >> $name.cpp
+echo "//----------------------- PUBLIC FUNCTIONS -----------------------  " >> $name.cpp
+
+
+
+
+
+echo "The files $name.cpp and $name.h where created."
